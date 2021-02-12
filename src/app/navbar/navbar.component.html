@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <a class="navbar-brand" routerLink="home">noxe</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="home">Home </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="movies">Movies </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="tvshow">TV Shows </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="people">People </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="about">About </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="network">NetWork </a>
+            </li>
+
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" (keyup)="search($event)">
+        </form>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-instagram"></i>
+        <ul class="navbar-nav">
+            <li *ngIf="!_AuthService.isLoggedIn()" class="nav-item">
+                <a class=" nav-link" routerLink="login">Login </a>
+            </li>
+            <li class="nav-item " *ngIf="!_AuthService.isLoggedIn()">
+                <a class="nav-link" routerLink="register">Register </a>
+            </li>
+            <li class="nav-item logout" *ngIf="_AuthService.isLoggedIn()">
+                <a class="nav-link" (click)="logout()">Logout </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

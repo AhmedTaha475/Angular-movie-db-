@@ -1,0 +1,9 @@
+@import "../../styles.scss";
+
+.title{
+    width: fit-content;
+    padding: 15px 15px;
+    border-radius: 50%;
+    background-color: $bgTransparent;
+    margin: auto;
+}

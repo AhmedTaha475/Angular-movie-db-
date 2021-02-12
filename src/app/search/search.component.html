@@ -1,0 +1,7 @@
+<div class="row py-5">
+    <div *ngFor="let item of searchData" class="col-md-3">
+        <a routerLink="/details/{{item.media_type}}/{{item.id}}"> <img
+                src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" class="w-100 rounded" alt=""></a>
+        <h4 class="my-2 text-center">{{item.name}}{{item.original_title}}</h4>
+    </div>
+</div>

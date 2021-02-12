@@ -1,0 +1,19 @@
+@import "../../styles.scss";
+.brdr{
+    border: $borderColor $borderHeight solid;
+    margin: 20px 0;
+}
+span{
+    color: $secondFontColor;
+}
+.rating{
+    width: 40px;
+    height: 40px;
+    background-color: $lightBgColor;
+    top: 0;
+    right: 0;
+    position: absolute;
+    span{
+        color: $fontColor;
+    }
+}
